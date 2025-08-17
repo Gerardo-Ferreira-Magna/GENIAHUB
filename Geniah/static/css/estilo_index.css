@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+:root{
+    --background: linear-gradient(135deg, #667eea7e 0%, #764ba298 100%);
+    --color-primary:#667eea;
+    --color-secondary:#764ba2;
+    --boton-padding: 20px 40px;
+    --color-rojo:#E30513;
+    --gris-oscuro:#5A5B5E;
+    --color-blanco:#FFFFFF;
+    --color-negro:#000000;
+    --gris-claro: #F5F5F5;
+
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 8px 0;
+    max-width: 1200px;
+
+}
+
+.subtitle{
+    color: var(--color-primary);
+    font-size: 2,5rem;
+    margin-bottom: 35px;
+}
+
+.hero{
+    height: 100vh;
+    background-image: var(--background), url(/static/img/principal.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+.hero .container{
+    padding: 0;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 70px;
+    align-items: center;
+    font-weight: 700;
+}
+
+.nav_items{
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    font-weight: inherit;
+}
+
+.nav_items--cta{
+    border: 1px solid var(--color-blanco);
+}
+
+.hero_container{
+    display: flex;
+    height: calc(100vh - 70px);
+    align-items: center;
+    color: var(--color-blanco);
+}
+
+.hero_texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero_title{
+    font-size: 3.2rem;
+}
+
+.hero_subtitle{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 15px 0;
+}
+
+.hero_cta{
+    display: inline-block;
+    background: var(--color-blanco);
+    padding: var(--boton-padding);
+    color: var(--color-primary);
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+.hero_wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/*Projects */
+
+.projects{
+
+    background: var(--gris-claro);
+
+}
+
+.projects_grid{
+    display: grid;
+    height: 550px;
+    grid-template-areas:
+    "img1 img1 img2 img3"
+    "img1 img1 img4 img5";
+    gap: 10px;
+    height: auto;
+}
+
+.projects_item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projects_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.projects_item:nth-last-of-type(1){
+    grid-area: img1;
+}
+
+.projects_item:nth-last-of-type(2){
+    grid-area: img2;
+}
+
+.projects_item:nth-last-of-type(3){
+    grid-area: img3;
+}
+
+.projects_item:nth-last-of-type(4){
+    grid-area: img4;
+}
+
+.projects_item:nth-last-of-type(5){
+    grid-area: img5;
+}
+
+.projects_hover{
+    position: absolute;
+    background: #dc143c8c;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--color-blanco);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.projects_item:hover .projects_hover{
+    transform: translateX(0%);
+}
+
+.projects_icon{
+
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+/* Estilos de la sección Nosotros */
+/*---------------------------------*/
+
+.nosotros {
+  padding: 4rem 1rem;
+  text-align: left;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.section-description {
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+/* Contenedor de las tarjetas con CSS Grid */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  gap: 2rem;
+}
+
+/* Estilos de cada tarjeta de miembro */
+.miembro-equipo {
+  color: var(--color-blanco);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.miembro-equipo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bg-gris {
+  background-color: var(--gris-claro);
+}
+
+.bg-rojo {
+  background-color: var(--color-primary);
+}
+
+/* Perfil de la persona con Flexbox para centrar y alinear */
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.perfil-imagen {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Para hacer la imagen circular */
+  object-fit: cover; /* Para que la imagen cubra el círculo */
+  border: 5px solid var(--color-blanco);
+  margin-bottom: 1rem;
+  
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.h3_gris {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.cargo {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.cargo_primary {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  color: var(--color-primary);
+}
+
+.descripcion {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.descripcion_primary {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 992px) {
+  .equipo-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .equipo-grid {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+}
+
+
+/* -------------------------------------*/
+/* Footer */
+/* -------------------------------------*/
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-blanco);
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+/* Contenedor principal con CSS Grid */
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-links h4,
+.footer-social h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Habilitamos Flexbox */
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+  gap: 1.5rem; /* Espacio entre los enlaces */
+}
+
+.footer-links a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Contenedor de iconos con Flexbox */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--color-blanco);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Estilos del copyright */
+.footer-copyright {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+  /* Nav centrado en móviles */
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav_items {
+    margin: 10px 0;
+    border: none; /* limpio subrayado */
+  }
+
+  /* Hero más compacto */
+  .hero_title{
+    font-size: 2rem;
+  }
+  
+  .hero_subtitle{
+    font-size: 1.1rem;
+  }
+
+  .hero_cta{
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Grid equipo: 1 columna en móviles */
+  .equipo-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Proyectos en columna */
+  .projects_grid {
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5";
+  }
+}
+
+/*Resposivo diseño */
+
+@media screen and (max-width: 800px){
+    :root{
+        --booton-padding: 18px 40px;
+    }
+
+    .nav{
+        justify-content: space-around;
+    }
+
+    .nav_items--cta{
+        border: none;
+    }
+
+    .nav_items{
+        font-weight: 400;
+        border-bottom: 1px solid var(--color-blanco);
+        margin-right: 0;
+    }
+
+    .hero_texts{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .hero_title{
+        font-size: 2.5rem;
+    }
+
+    .hero_subtitle{
+        font-size: 1.5rem;
+    }
+
+    .projects_grid{
+        grid-template-areas:
+        "img1 img1 img2 img2"
+        "img1 img1 img3 img3"
+        "img4 img4 img5 img5";
+    }
+
+}

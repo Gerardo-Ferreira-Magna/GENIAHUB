@@ -1,0 +1,173 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inicio</title>
+    <link rel="stylesheet" href="{% static 'css/normalizador.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo_index.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<body>
+    
+    <header class="hero">
+        <div class="container">
+            <nav class="nav">
+                <a href="" class="nav_items nav_items--cta">Inicio</a>
+                <a href="" class="nav_items">Proyectos</a>
+                <a href="" class="nav_items">Nosotros</a>
+                <a href="" class="nav_items">Inicio Sesión</a>
+            </nav>
+
+            <section class="hero_container">
+                <div class="hero_texts">
+                    <h1 class="hero_title">GENIAHUB Conectando Proyectos</h1>
+                    <h2 class="hero_subtitle">Plataforma para la gestion de Proyectos, facilitando la colaboración entre alumnos, docentes y empresas.</h2>
+                    <a href="" class="hero_cta">Registrarse</a>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="hero_wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #F5F5F5;"></path></svg></div>
+
+    </header>
+
+    <main>
+
+        <section class="projects">
+            <div class="container">
+                <h2 class="section-title">Proyectos</h2>
+                <div class="projects_grid">
+
+                    <article class="projects_item">
+                        <img src="{% static 'img/img1.jpg' %}" alt="" class="projects_img">
+                        <div class="projects_hover">
+                            <h2 class="proyects_title">Proyecto</h2>
+                            <i class="bi bi-app-indicator proyects_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="projects_item">
+                        <img src="{% static 'img/img2.jpg' %}" alt="" class="projects_img">
+                        <div class="projects_hover">
+                            <h2 class="proyects_title">Proyecto</h2>
+                            <i class="bi bi-app-indicator proyects_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="projects_item">
+                        <img src="{% static 'img/img3.jpg' %}" alt="" class="projects_img">
+                        <div class="projects_hover">
+                            <h2 class="proyects_title">Proyecto</h2>
+                            <i class="bi bi-app-indicator proyects_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="projects_item">
+                        <img src="{% static 'img/img4.jpg' %}" alt="" class="projects_img">
+                        <div class="projects_hover">
+                            <h2 class="proyects_title">Proyecto</h2>
+                            <i class="bi bi-app-indicator proyects_icon"></i>
+                        </div>
+                    </article>
+
+                    <article class="projects_item">
+                        <img src="{% static 'img/img5.jpg' %}" alt="" class="projects_img">
+                        <div class="projects_hover">
+                            <h2 class="proyects_title">Proyecto</h2>
+                            <i class="bi bi-app-indicator proyects_icon"></i>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="nosotros">
+            <div class="container">
+                <h2 class="section-title">Nosotros</h2>
+                <p class="section-description">Somos ingenieros informáticos apasionados por la tecnología y la innovación.</p>
+
+                <div class="equipo-grid">
+
+                <div class="miembro-equipo bg-gris">
+                    <div class="perfil">
+                    <img src="{% static 'img/Mauricio.jpg' %}" alt="Mauricio Retamal Rubio" class="perfil-imagen">
+                    <h3 class="h3_gris">Mauricio Retamal Rubio</h3>
+                    <p class="cargo_primary">Ingeniero Informático</p>
+                    </div>
+                    <p class="descripcion_primary">
+                    Experto en desarrollo de software, con un enfoque en la creación de soluciones eficientes y escalables.
+                    </p>
+                </div>
+
+                <div class="miembro-equipo bg-rojo">
+                    <div class="perfil">
+                    <img src="https://via.placeholder.com/150" alt="Yesenia Catalán Rubio" class="perfil-imagen">
+                    <h3>Yesenia Catalán Rubio</h3>
+                    <p class="cargo">Ingeniera Informática</p>
+                    </div>
+                    <p class="descripcion">
+                    Líder en ciberseguridad y protección de datos, comprometido con la defensa de la información en el entorno digital.
+                    </p>
+                </div>
+
+                <div class="miembro-equipo bg-gris">
+                    <div class="perfil">
+                    <img src="{% static 'img/Gerardo.jpg' %}" alt="Gerardo Ferreira Magna" class="perfil-imagen">
+                    <h3 class="h3_gris">Gerardo Ferreira Magna</h3>
+                    <p class="cargo_primary">Ingeniero Informático</p>
+                    </div>
+                    <p class="descripcion_primary">
+                    Especializada en diseño de bases de datos y análisis de sistemas, asegurando la integridad y el rendimiento de los datos.
+                    </p>
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-links">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-social">
+            <h4>Síguenos</h4>
+            <div class="social-icons">
+                <a href="https://wa.me/" target="_blank" aria-label="WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.google.com/" target="_blank" aria-label="Google">
+                <i class="bi bi-google"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                <i class="bi bi-twitter"></i>
+                </a>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p>&copy; 2025 Todos los derechos reservados Gerardo Ferreira Magna.</p>
+        </div>
+    </footer>
+        
+    
+</body>
+</html>
