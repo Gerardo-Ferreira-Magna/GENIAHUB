@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Panel de Control{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'css/estilo_base2.css' %}">
+</head>
+<body>
+    <div class="dashboard-container" id="dashboard-container">
+        <aside class="sidebar" id="sidebar">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+                <div class="user-info">
+                    <span class="user-name">Dr. Miles</span>
+                    <span class="user-role">Profesor</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="bi bi-house-door"></i>
+                    Inicio
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="bi bi-folder-fill"></i>
+                    Proyectos
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="bi bi-people-fill"></i>
+                    Equipos
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="bi bi-bell-fill"></i>
+                    Notificaciones
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="bi bi-person-fill"></i>
+                    Perfil
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="bi bi-list"></i>
+                </button>
+                <h1>{% block page_title %}Panel Principal del Profesor{% endblock %}</h1>
+            </header>
+            <div class="content-area">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const dashboardContainer = document.getElementById('dashboard-container');
+
+        toggle.addEventListener('click', (event) => {
+            event.stopPropagation(); // Evita que el clic se propague al documento
+            sidebar.classList.toggle('active');
+        });
+
+        // Cierra el menú si se hace clic fuera de él
+        dashboardContainer.addEventListener('click', (event) => {
+            // Si el menú está activo y el clic no fue dentro del menú
+            if (sidebar.classList.contains('active') && !sidebar.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

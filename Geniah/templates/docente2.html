@@ -1,0 +1,53 @@
+{% extends 'base2.html' %}
+
+{% block page_title %}Panel Profesor{% endblock %}
+
+{% block content %}
+    <div class="section">
+        <h2 class="section-title">Proyectos Supervisados</h2>
+        <div class="card project-card">
+            <div class="card-info">
+                <h3>Proyecto de Investigación en Energías Renovables</h3>
+                <p>Investigación sobre nuevas fuentes de energía sostenible.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <div class="card-info">
+                <h3>Desarrollo de Aplicación Móvil para la Comunidad Universitaria</h3>
+                <p>Aplicación para mejorar la comunicación y organización en la universidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Solicitudes de Aprobación</h2>
+        <div class="card request-card">
+            <div class="card-info">
+                <h3>Propuesta: Sistema de Gestión de Residuos</h3>
+                <p>Pendiente de revisión</p>
+            </div>
+        </div>
+        <div class="card request-card">
+            <div class="card-info">
+                <h3>Propuesta: Plataforma de Aprendizaje en Línea</h3>
+                <p>Pendiente de revisión</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Notificaciones Recientes</h2>
+        <div class="card notification-card">
+            <div class="card-info">
+                <h3>Proyecto de Investigación en Energías Renovables</h3>
+                <p>Nuevo comentario en proyecto</p>
+            </div>
+        </div>
+        <div class="card notification-card">
+            <div class="card-info">
+                <h3>Desarrollo de Aplicación Móvil para la Comunidad Universitaria</h3>
+                <p>Cambio de estado en proyecto</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

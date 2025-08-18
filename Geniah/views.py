@@ -13,3 +13,6 @@ def contact(request):
 
 def docente(request):
     return render(request, "docente.html")
+
+def docente2(request):
+    return render(request, "docente2.html")
