@@ -16,3 +16,9 @@ def docente(request):
 
 def docente2(request):
     return render(request, "docente2.html")
+
+def login(request):
+    return render(request, "login.html")
+
+def registro(request):
+    return render(request, "registro.html")
